@@ -3,6 +3,7 @@ import re
 my_reversed_list = []
 
 def is_palindrome(sentence):
+    my_reversed_list = []
     characters_only = re.sub("[^A-Za-z0-9]", "", sentence).lower()
     print("Your sentence without the special characters is: ", characters_only)
     sentence = list(characters_only)
