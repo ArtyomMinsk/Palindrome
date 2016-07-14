@@ -2,7 +2,7 @@ import re
 
 my_reversed_list = []
 
-def is_polindrome(sentence):
+def is_palindrome(sentence):
     length = len(sentence)
 
     for item in sentence:
@@ -24,7 +24,7 @@ def main():
     print("Your sentence without the special characters is: ", characters_only)
     sentence = list(characters_only)
 
-    is_polindrome(sentence)
+    is_palindrome(sentence)
 
 if __name__ == '__main__':
     main()
