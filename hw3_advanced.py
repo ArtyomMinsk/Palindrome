@@ -3,6 +3,10 @@ import re
 my_reversed_list = []
 
 def is_palindrome(sentence):
+    characters_only = re.sub("[^A-Za-z0-9]", "", sentence).lower()
+    print("Your sentence without the special characters is: ", characters_only)
+    sentence = list(characters_only)
+
     length = len(sentence)
 
     for item in sentence:
@@ -14,15 +18,14 @@ def is_palindrome(sentence):
 
     if sentence == my_reversed_list:
         print("Your sentence is a palindrome")
+        return True
     else:
         print("Your sentence is not a palindrome")
+        return False
 
 
 def main():
-    sentence = input("Please input a word/sentence: ").lower()
-    characters_only = re.sub("[^A-Za-z0-9]", "", sentence)
-    print("Your sentence without the special characters is: ", characters_only)
-    sentence = list(characters_only)
+    sentence = input("Please input a word/sentence: ")
 
     is_palindrome(sentence)
 
